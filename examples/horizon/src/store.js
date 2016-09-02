@@ -16,44 +16,41 @@ module.exports = new Vuex.Store({
   },
   actions: {
     syncTodos: function (store) {
-      dbTodos.watch()
-        .subscribe(
-          function (todos) {
-            store.commit('SET_TODOS', todos)
-            store.commit('SET_ERROR_MESSAGE', '')
-            store.commit('SET_IS_LOADING', false)
-          },
-          function () {
-            store.commit('SET_ERROR_MESSAGE', 'Could not sync todos.')
-          }
-        )
+      dbTodos.watch().subscribe(
+        function (todos) {
+          store.commit('SET_TODOS', todos)
+          store.commit('SET_ERROR_MESSAGE', '')
+          store.commit('SET_IS_LOADING', false)
+        },
+        function () {
+          store.commit('SET_ERROR_MESSAGE', 'Could not sync todos.')
+        }
+      )
     },
     setNewTodoText: function (store, newTodoText) {
       store.commit('SET_NEW_TODO_TEXT', newTodoText)
     },
     addTodo: function (store, newTodoText) {
       var newTodo = { text: newTodoText }
-      dbTodos.store(newTodo)
-        .subscribe(
-          function () {
-            store.commit('SET_NEW_TODO_TEXT', '')
-            store.commit('SET_ERROR_MESSAGE', '')
-          },
-          function () {
-            store.commit('SET_ERROR_MESSAGE', 'Could not save todo.')
-          }
-        )
+      dbTodos.store(newTodo).subscribe(
+        function () {
+          store.commit('SET_NEW_TODO_TEXT', '')
+          store.commit('SET_ERROR_MESSAGE', '')
+        },
+        function () {
+          store.commit('SET_ERROR_MESSAGE', 'Could not save todo.')
+        }
+      )
     },
     removeTodo: function (store, todo) {
-      dbTodos.remove(todo.id)
-        .subscribe(
-          function () {
-            store.commit('SET_ERROR_MESSAGE', '')
-          },
-          function () {
-            store.commit('SET_ERROR_MESSAGE', 'Could not delete todo.')
-          }
-        )
+      dbTodos.remove(todo.id).subscribe(
+        function () {
+          store.commit('SET_ERROR_MESSAGE', '')
+        },
+        function () {
+          store.commit('SET_ERROR_MESSAGE', 'Could not delete todo.')
+        }
+      )
     }
   },
   mutations: {
