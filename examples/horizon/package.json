@@ -5,7 +5,8 @@
     "frontend:dev": "webpack-dev-server --inline --hot --content-base dist",
     "horizon:dev": "hz serve --dev",
     "dev": "npm-run-all --parallel frontend:dev horizon:dev",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules && cp -f index.html dist/index.html"
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules && cp -f index.html dist/index.html",
+    "start": "npm-run-all build horizon:dev"
   },
   "dependencies": {
     "vue": "^2.0.0-rc.3",

@@ -3,7 +3,14 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "lint": "eslint examples/express examples/hapi examples/horizon/src"
+    "lint": "eslint examples/express examples/hapi examples/horizon/src",
+    "express:hello": "node examples/express/01.\\ hello-world/server",
+    "express:rest": "node examples/express/02.\\ rest-api/server",
+    "express:server": "node examples/express/03.\\ authentication/server",
+    "hapi:hello": "node examples/hapi/01.\\ hello-world/server",
+    "hapi:rest": "node examples/hapi/02.\\ rest-api/server",
+    "hapi:server": "node examples/hapi/03.\\ authentication/server",
+    "horizon": "cd example/horizon && npm run start"
   },
   "author": "Chris Fritz",
   "license": "MIT",
