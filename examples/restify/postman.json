@@ -1,0 +1,35 @@
+{
+	"id": "5947c4ba-c3c0-16ed-08a7-f5fad1587021",
+	"name": "Node Server Demos",
+	"description": "",
+	"order": [
+		"0a4bed4d-707c-6c45-eeb0-0ff9625ff5a3"
+	],
+	"folders": [],
+	"timestamp": 1473705163476,
+	"owner": "2440",
+	"public": false,
+	"published": false,
+	"requests": [
+		{
+			"id": "0a4bed4d-707c-6c45-eeb0-0ff9625ff5a3",
+			"headers": "",
+			"url": "http://{{host}}:{{port}}/",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "5947c4ba-c3c0-16ed-08a7-f5fad1587021",
+			"data": null,
+			"dataMode": "params",
+			"name": "01. hello-world",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1473705297817,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}

@@ -33,6 +33,7 @@
     "joi": "^9.0.4",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
+    "restify": "^4.1.1",
     "yar": "^7.0.2"
   },
   "devDependencies": {
