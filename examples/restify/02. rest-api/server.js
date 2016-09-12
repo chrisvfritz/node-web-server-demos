@@ -1,4 +1,9 @@
 var restify = require('restify');
+var joi = require('joi');
+
+const validTodoParams = {
+  id: joi.number().integer().min(1).required()
+};
 
 const server = restify.createServer();
 server.use(restify.queryParser({ mapParams: false }));
@@ -15,27 +20,45 @@ server.post('/todos', function(req, res, next) {
 });
 
 server.get('/todos/:id', function(req, res, next) {
-  res.send({
-    action: 'Show todo',
-    id: req.params.id
+  joi.validate({ id: req.params.id }, validTodoParams, function(err, value) {
+    if (err) {
+      next(new restify.BadRequestError(err.message));
+    } else {
+      res.send({
+        action: 'Show todo',
+        id: req.params.id
+      });
+      next();
+    }
   });
-  next();
 });
 
 server.put('/todos/:id', function(req, res, next) {
-  res.send({
-    action: 'Update todo',
-    id: req.params.id
+  joi.validate({ id: req.params.id }, validTodoParams, function(err, value) {
+    if (err) {
+      next(new restify.BadRequestError(err.message));
+    } else {
+      res.send({
+        action: 'Update todo',
+        id: req.params.id
+      });
+      next();
+    }
   });
-  next();
 });
 
 server.del('/todos/:id', function(req, res, next) {
-  res.send({
-    action: 'Delete todo',
-    id: req.params.id
+  joi.validate({ id: req.params.id }, validTodoParams, function(err, value) {
+    if (err) {
+      next(new restify.BadRequestError(err.message));
+    } else {
+      res.send({
+        action: 'Delete todo',
+        id: req.params.id
+      });
+      next();
+    }
   });
-  next();
 });
 
 server.listen(3000, function() {
