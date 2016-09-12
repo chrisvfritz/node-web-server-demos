@@ -2,7 +2,7 @@
 
 ## Short Opinions
 
-- Erik: Since Restify focuses on "strict" API development, it's not as beginner friendly. Not because the syntax is much different from say, Express, but because it gets out of your way so you can focus on implementing your HTTP API how you want it. Knowledge of HTTP verbs, status codes, common headers, and a different set of tools to interact with your API is highly recommended. When you're building an API that you will unleash onto the world so anyone can integrate with it (or management say micro-service APIs are how all future system integration should happen), then Restify is worth a look. The DTrace support is wicked cool and great where performance needs to be scrutinized, but you have to learn DTrace. There's also builtin support for bunyan logging (JSON logging).
+- Erik: Restify focuses on "strict" API development so there aren't many frills. It will be helpful to know or learn HTTP verbs, status codes, headers, and a different set of tools to interact with your API, though. If you're building an API that anyone in the world can integrate with (or management say micro-service APIs are how all future system integration should happen), then Restify is worth a look.
 
 ## The Mei System
 
