@@ -17,10 +17,10 @@ For each additional example you add (or for each example you modify), try to mat
 - Express
 - Hapi
 - Horizon (no server) - this example doesn't follow the rules, since there isn't actually any backend code to write!
+- Restify
 
 ## Welcome Examples
 
 We'd also love examples of the following libraries, so if you're familiar with them, please contribute!
 
-- Restify (I believe Erik may work on this)
 - Koa

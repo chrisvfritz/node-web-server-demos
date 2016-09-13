@@ -10,7 +10,10 @@
     "hapi:hello": "node examples/hapi/01.\\ hello-world/server",
     "hapi:rest": "node examples/hapi/02.\\ rest-api/server",
     "hapi:server": "node examples/hapi/03.\\ authentication/server",
-    "horizon": "cd example/horizon && npm run start"
+    "horizon": "cd example/horizon && npm run start",
+    "restify:hello": "node examples/restify/01.\\ hello-world/server",
+    "restify:rest": "node examples/restify/02.\\ rest-api/server",
+    "restify:server": "node examples/restify/03.\\ authentication/server"
   },
   "author": "Chris Fritz",
   "license": "MIT",
@@ -31,8 +34,10 @@
     "horizon": "^2.0.0",
     "inert": "^4.0.2",
     "joi": "^9.0.4",
+    "jsonwebtoken": "^7.1.9",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
+    "restify": "^4.1.1",
     "yar": "^7.0.2"
   },
   "devDependencies": {
