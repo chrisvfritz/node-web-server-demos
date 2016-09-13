@@ -40,6 +40,24 @@
 				"c1e76544-692c-1593-7042-e684042c161e"
 			],
 			"owner": "2440"
+		},
+		{
+			"id": "7256b532-1724-940c-2cb6-caad9994e0e8",
+			"name": "04. bunyan",
+			"description": "",
+			"order": [
+				"2b4250a3-8108-b7e4-672a-8b57c13c56a4"
+			],
+			"owner": "2440"
+		},
+		{
+			"id": "0a52f25a-c353-2705-f9dc-976f579212db",
+			"name": "05. dtrace",
+			"description": "",
+			"order": [
+				"14f9b023-6448-8217-b254-0c2b0c26ecfe"
+			],
+			"owner": "2440"
 		}
 	],
 	"timestamp": 1473705163476,
@@ -67,6 +85,25 @@
 			"currentHelper": "normal",
 			"helperAttributes": {},
 			"folder": "1bccc85c-5206-1df5-4875-4b718a0ac47a"
+		},
+		{
+			"id": "14f9b023-6448-8217-b254-0c2b0c26ecfe",
+			"headers": "",
+			"url": "http://{{host}}:{{port}}/",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1473785887592,
+			"name": "Greeting test",
+			"description": "",
+			"collectionId": "5947c4ba-c3c0-16ed-08a7-f5fad1587021",
+			"responses": []
 		},
 		{
 			"id": "23fb9f0c-6d3f-de86-fbcf-6da0704b8c6c",
@@ -101,6 +138,25 @@
 			"helperAttributes": {},
 			"time": 1473715166161,
 			"name": "Not found",
+			"description": "",
+			"collectionId": "5947c4ba-c3c0-16ed-08a7-f5fad1587021",
+			"responses": []
+		},
+		{
+			"id": "2b4250a3-8108-b7e4-672a-8b57c13c56a4",
+			"headers": "",
+			"url": "http://{{host}}:{{port}}/",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1473773305698,
+			"name": "Greetings!",
 			"description": "",
 			"collectionId": "5947c4ba-c3c0-16ed-08a7-f5fad1587021",
 			"responses": []
