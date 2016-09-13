@@ -28,6 +28,18 @@
 			],
 			"owner": "2440",
 			"collectionId": "5947c4ba-c3c0-16ed-08a7-f5fad1587021"
+		},
+		{
+			"id": "d98d8300-0588-d2d7-9b5b-3ea650f37336",
+			"name": "03. authentication",
+			"description": "",
+			"order": [
+				"a820f3e9-47b7-def5-52e0-6ce255ee8e85",
+				"d6d6ce3a-d4f8-10fe-d13d-bd70ed354ad7",
+				"23fb9f0c-6d3f-de86-fbcf-6da0704b8c6c",
+				"c1e76544-692c-1593-7042-e684042c161e"
+			],
+			"owner": "2440"
 		}
 	],
 	"timestamp": 1473705163476,
@@ -55,6 +67,25 @@
 			"currentHelper": "normal",
 			"helperAttributes": {},
 			"folder": "1bccc85c-5206-1df5-4875-4b718a0ac47a"
+		},
+		{
+			"id": "23fb9f0c-6d3f-de86-fbcf-6da0704b8c6c",
+			"headers": "Content-Type: application/json\n",
+			"url": "http://{{host}}:{{port}}/logins",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1473736259715,
+			"name": "Login",
+			"description": "",
+			"collectionId": "5947c4ba-c3c0-16ed-08a7-f5fad1587021",
+			"responses": [],
+			"rawModeData": "{\n\t\"email\": \"erik.gillespie@gmail.com\",\n\t\"password\": \"1234\"\n}"
 		},
 		{
 			"id": "292a6323-7cfd-db90-e368-814fa530d66a",
@@ -168,6 +199,24 @@
 			"responses": []
 		},
 		{
+			"id": "a820f3e9-47b7-def5-52e0-6ce255ee8e85",
+			"headers": "",
+			"url": "http://{{host}}:{{port}}/",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1473727496936,
+			"name": "No login required",
+			"description": "",
+			"collectionId": "5947c4ba-c3c0-16ed-08a7-f5fad1587021",
+			"responses": []
+		},
+		{
 			"id": "bfcce669-ecdb-92e8-92fc-307f5b8b7572",
 			"headers": "",
 			"url": "http://{{host}}:{{port}}/todos/5",
@@ -181,6 +230,42 @@
 			"helperAttributes": {},
 			"time": 1473715031231,
 			"name": "Delete one todo",
+			"description": "",
+			"collectionId": "5947c4ba-c3c0-16ed-08a7-f5fad1587021",
+			"responses": []
+		},
+		{
+			"id": "c1e76544-692c-1593-7042-e684042c161e",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImlhdCI6MTQ3MzczNjE2NTQ5MSwiZXhwIjoxNDc0MzQwOTY1NDkxLCJqdGkiOiIwLjU5ODU3OTQ4NTg0MTgxNjUiLCJuYW1lIjoiRXJpayBHaWxsZXNwaWUiLCJlbWFpbCI6ImVyaWsuZ2lsbGVzcGllQGdtYWlsLmNvbSJ9.TcNh1VvHevlfDE5TTaL3E7DIqAVdWecQdatMU0O1jBU\n",
+			"url": "http://{{host}}:{{port}}/todos",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1473737006314,
+			"name": "Login required, provided",
+			"description": "",
+			"collectionId": "5947c4ba-c3c0-16ed-08a7-f5fad1587021",
+			"responses": []
+		},
+		{
+			"id": "d6d6ce3a-d4f8-10fe-d13d-bd70ed354ad7",
+			"headers": "",
+			"url": "http://{{host}}:{{port}}/todos",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1473734642821,
+			"name": "Login required, not provided",
 			"description": "",
 			"collectionId": "5947c4ba-c3c0-16ed-08a7-f5fad1587021",
 			"responses": []
