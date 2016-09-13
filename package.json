@@ -14,7 +14,8 @@
     "restify:hello": "node examples/restify/01.\\ hello-world/server",
     "restify:rest": "node examples/restify/02.\\ rest-api/server",
     "restify:server": "node examples/restify/03.\\ authentication/server",
-    "restify:bunyan": "node examples/restify/04.\\ bunyan/server | bunyan"
+    "restify:bunyan": "node examples/restify/04.\\ bunyan/server | bunyan",
+    "restify:dtrace": "node examples/restify/05.\\ dtrace/server"
   },
   "author": "Chris Fritz",
   "license": "MIT",
